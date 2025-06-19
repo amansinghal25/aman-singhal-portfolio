@@ -10,6 +10,7 @@
 </head>
 <body>
   <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
 
   <nav class="navbar">
     <ul>
@@ -59,37 +60,39 @@
 
     <section id="experience" class="section wave-bottom fade-in">
       <h2>Professional Experience</h2>
-      <div class="card">
-        <h3>Operations Coordinator – BrandSearch, afaqs! <span>Dec 2024 – Present</span></h3>
-        <ul>
-          <li>Led product lifecycle management and UX optimization</li>
-          <li>Coordinated with editorial, tech, and business teams</li>
-          <li>Managed pricing, credits, and support systems</li>
-          <li>Updated brand/agency data and analyzed user feedback</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Marketing Intern – Pickyourtrail <span>Feb – May 2023</span></h3>
-        <ul>
-          <li>Onboarded 80 hotels and converted 22 international leads</li>
-          <li>Conducted competitive pricing analysis across OTAs</li>
-          <li>Handled retention calls in Dubai and Singapore markets</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Social Media Intern – Aashman Foundation <span>Jul – Oct 2021</span></h3>
-        <ul>
-          <li>Promoted NGO across Instagram, Facebook, and Twitter</li>
-          <li>Created content and raised awareness/funds</li>
-        </ul>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Operations Coordinator – BrandSearch, afaqs! <span>Dec 2024 – Present</span></h3>
+          <ul>
+            <li>Led product lifecycle management and UX optimization</li>
+            <li>Coordinated with editorial, tech, and business teams</li>
+            <li>Managed pricing, credits, and support systems</li>
+            <li>Updated brand/agency data and analyzed user feedback</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Marketing Intern – Pickyourtrail <span>Feb – May 2023</span></h3>
+          <ul>
+            <li>Onboarded 80 hotels and converted 22 international leads</li>
+            <li>Conducted competitive pricing analysis across OTAs</li>
+            <li>Handled retention calls in Dubai and Singapore markets</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Social Media Intern – Aashman Foundation <span>Jul – Oct 2021</span></h3>
+          <ul>
+            <li>Promoted NGO across Instagram, Facebook, and Twitter</li>
+            <li>Created content and raised awareness/funds</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <section id="projects" class="section wave-top fade-in">
       <h2>Projects</h2>
-      <div class="projects">
+      <div class="card-grid">
         <div class="project-card">
-          <h3>BrandSearch Ops</h3>
+          <h3>BrandSearch Operations Co-ordinator</h3>
           <p>Redesigned pricing, credit system, and ops workflows for thousands of B2B users.</p>
         </div>
         <div class="project-card">
@@ -137,14 +140,12 @@
   </footer>
 
   <script>
-    // Theme toggle
     document.getElementById('theme-toggle').onclick = () => {
       const html = document.documentElement;
       const theme = html.getAttribute('data-theme');
       html.setAttribute('data-theme', theme === 'dark' ? 'light' : 'dark');
     };
 
-    // Scroll fade-in
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
@@ -152,11 +153,13 @@
     }, { threshold: 0.2 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    // Custom cursor
     const cursor = document.querySelector('.custom-cursor');
+    const dot = document.querySelector('.custom-cursor-dot');
     document.addEventListener('mousemove', e => {
       cursor.style.left = e.clientX + 'px';
       cursor.style.top = e.clientY + 'px';
+      dot.style.left = e.clientX + 'px';
+      dot.style.top = e.clientY + 'px';
     });
   </script>
 </body>
