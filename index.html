@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aman Singhal | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero">
+    <h1>Aman Singhal</h1>
+    <p class="tagline">Operations & Marketing Professional | Product Ops • B2B • Digital Strategy</p>
+    <a href="Aman_Singhal_Resume.pdf" download class="resume-btn">Download Resume</a>
+    <button id="theme-toggle">🌓</button>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>
+      I'm an operations and marketing enthusiast with hands-on experience in B2B product operations, digital marketing,
+      and social media campaigns. I specialize in driving efficiency, coordinating cross-functional teams, and optimizing user experience.
+    </p>
+  </section>
+
+  <section>
+    <h2>Areas of Expertise</h2>
+    <ul class="skills">
+      <li>Product Operations</li>
+      <li>B2B Platform Management</li>
+      <li>Marketing & Business Development</li>
+      <li>Social Media Marketing</li>
+      <li>Data Analysis & Market Research</li>
+      <li>SQL (Intermediate)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="job">
+      <h3>Operations Coordinator – BrandSearch, afaqs! <span class="duration">Dec 2024 – Present</span></h3>
+      <ul>
+        <li>Oversaw product lifecycle including data onboarding and UX optimization</li>
+        <li>Led marketing campaigns to boost product visibility</li>
+        <li>Managed user support, pricing plans, and credit systems</li>
+        <li>Coordinated with editorial, tech, and business teams for updates</li>
+        <li>Analyzed user feedback for roadmap planning</li>
+      </ul>
+    </div>
+    <div class="job">
+      <h3>Marketing Intern – Pickyourtrail <span class="duration">Feb – May 2023</span></h3>
+      <ul>
+        <li>Onboarded 80+ hotels and converted 22 international leads</li>
+        <li>Conducted market pricing analysis in Excel</li>
+        <li>Reached out to hotels for B2B partnerships</li>
+      </ul>
+    </div>
+    <div class="job">
+      <h3>Social Media Intern – Aashman Foundation <span class="duration">Jul – Oct 2021</span></h3>
+      <ul>
+        <li>Promoted NGO campaigns across social platforms</li>
+        <li>Raised funds and awareness for underprivileged communities</li>
+        <li>Created visuals and banners for engagement</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <ul>
+      <li><strong>PGPM (Marketing)</strong>, IBS Gurgaon, 2024 – CGPA: 6.49</li>
+      <li><strong>BBA</strong>, RDIAS (GGSIPU), 2022 – 77.60%</li>
+      <li><strong>Senior Secondary</strong>, Sachdeva Public School, 2019 – 81.20%</li>
+      <li><strong>Secondary</strong>, Sachdeva Public School, 2016 – 8 CGPA</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Certifications & Achievements</h2>
+    <ul>
+      <li>SIP Appreciation Award (2023)</li>
+      <li>Letter of Recommendation – Pickyourtrail</li>
+      <li>Intermediate SQL – DataCamp (2022)</li>
+      <li>15–25% better pricing margin vs competitors</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:Aman.singhal22@ibsindia.org">Aman.singhal22@ibsindia.org</a></p>
+    <p>Phone: +91-9899809035</p>
+    <p>Location: Delhi, India</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Aman Singhal | All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    toggle.onclick = () => {
+      const html = document.documentElement;
+      const theme = html.getAttribute('data-theme');
+      html.setAttribute('data-theme', theme === 'dark' ? 'light' : 'dark');
+    };
+  </script>
+</body>
+</html>
