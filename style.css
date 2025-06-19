@@ -27,7 +27,7 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-/* Custom Cursor */
+/* Custom Cursor (Creative) */
 .custom-cursor, .custom-cursor-dot {
   position: fixed;
   top: 0; left: 0;
@@ -37,16 +37,21 @@ body {
   z-index: 9999;
 }
 .custom-cursor {
-  width: 30px;
-  height: 30px;
-  background: rgba(99,102,241,0.2);
-  border: 2px solid var(--primary);
-  mix-blend-mode: difference;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle at center, rgba(99, 102, 241, 0.3), transparent 70%);
+  border: 2px dashed var(--accent);
+  animation: spin 2s linear infinite;
 }
 .custom-cursor-dot {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   background: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+}
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 /* Navbar */
@@ -138,7 +143,8 @@ body {
   border-radius: 12px;
   margin: 2rem auto;
   background: linear-gradient(to right, #f0f4ff, #e0f7ff);
-  max-width: 1000px;
+  max-width: 1200px;
+  box-sizing: border-box;
 }
 .wave-top::before,
 .wave-bottom::after {
@@ -171,7 +177,7 @@ ul {
 .card-grid {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin-top: 2rem;
 }
 .card, .project-card {
@@ -262,5 +268,9 @@ footer {
   }
   .hero {
     padding: 3rem 1rem;
+  }
+  .section {
+    padding: 2rem 1rem;
+    margin: 1rem;
   }
 }
