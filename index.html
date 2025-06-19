@@ -15,16 +15,19 @@
 
   <!-- Navbar -->
   <nav class="navbar">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#expertise">Expertise</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button id="theme-toggle">🌓</button>
+    <div class="nav-container">
+      <button class="hamburger" id="hamburger">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="theme-toggle">🌓</button>
+    </div>
   </nav>
 
   <!-- Hero Section -->
@@ -145,14 +148,12 @@
 
   <!-- Scripts -->
   <script>
-    // Theme toggle
     document.getElementById('theme-toggle').onclick = () => {
       const html = document.documentElement;
       const theme = html.getAttribute('data-theme');
       html.setAttribute('data-theme', theme === 'dark' ? 'light' : 'dark');
     };
 
-    // Fade-in animation
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
@@ -160,7 +161,6 @@
     }, { threshold: 0.2 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    // Custom Cursor
     const cursor = document.querySelector('.custom-cursor');
     const dot = document.querySelector('.custom-cursor-dot');
     document.addEventListener('mousemove', e => {
@@ -169,6 +169,10 @@
       dot.style.left = e.clientX + 'px';
       dot.style.top = e.clientY + 'px';
     });
+
+    document.getElementById('hamburger').onclick = () => {
+      document.getElementById('nav-links').classList.toggle('active');
+    };
   </script>
 </body>
 </html>
