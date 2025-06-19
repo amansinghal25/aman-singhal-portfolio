@@ -5,10 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aman Singhal | Creative Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
+  <div class="custom-cursor"></div>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="theme-toggle">🌓</button>
+  </nav>
+
   <header class="hero">
     <img src="aman-profile.jpg" alt="Aman Singhal" class="profile-pic" />
     <h1>Aman Singhal</h1>
@@ -18,21 +33,19 @@
       <a href="https://www.linkedin.com/in/amansinghal22" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://github.com/amansinghal" target="_blank"><i class="fab fa-github"></i></a>
     </div>
-    <button id="theme-toggle">🌓</button>
   </header>
 
   <main>
-    <section class="fade-in colorful-section">
+    <section id="about" class="section fade-in">
       <h2>About Me</h2>
       <p>
-        Operations and Marketing enthusiast with hands-on experience in B2B product operations,
-        digital marketing, and social media campaigns. Adept at cross-functional coordination,
-        data analysis, and business development. Proven ability to drive operational efficiency and
-        optimize user experience through structured processes and strong interpersonal skills.
+        Operations and Marketing enthusiast with hands-on experience in B2B product operations, digital marketing, and social media campaigns.
+        Adept at cross-functional coordination, data analysis, and business development.
+        Proven ability to drive operational efficiency and optimize user experience through structured processes and strong interpersonal skills.
       </p>
     </section>
 
-    <section class="fade-in colorful-section">
+    <section id="expertise" class="section wave-top fade-in">
       <h2>Expertise</h2>
       <div class="badges">
         <span>Product Operations</span>
@@ -44,7 +57,7 @@
       </div>
     </section>
 
-    <section class="fade-in colorful-section">
+    <section id="experience" class="section wave-bottom fade-in">
       <h2>Professional Experience</h2>
       <div class="card">
         <h3>Operations Coordinator – BrandSearch, afaqs! <span>Dec 2024 – Present</span></h3>
@@ -72,7 +85,25 @@
       </div>
     </section>
 
-    <section class="fade-in colorful-section">
+    <section id="projects" class="section wave-top fade-in">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project-card">
+          <h3>BrandSearch Ops</h3>
+          <p>Redesigned pricing, credit system, and ops workflows for thousands of B2B users.</p>
+        </div>
+        <div class="project-card">
+          <h3>Home Loan EMI Calculator</h3>
+          <p>Web app to calculate EMIs for floating/fixed loans using real-time calculations.</p>
+        </div>
+        <div class="project-card">
+          <h3>Resume Generator Tool</h3>
+          <p>Tool to convert Word/PDF resumes into editable Excel formats for HRs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section wave-bottom fade-in">
       <h2>Education</h2>
       <ul>
         <li><strong>PGPM (Marketing + Finance)</strong> – IBS Gurgaon | 2024 | CGPA: 6.49</li>
@@ -82,55 +113,55 @@
       </ul>
     </section>
 
-    <section class="fade-in colorful-section">
-      <h2>Certifications & Achievements</h2>
-      <ul>
-        <li>SQL Intermediate – DataCamp (2022)</li>
-        <li>SIP Appreciation Award (2023)</li>
-        <li>Letter of Recommendation – Pickyourtrail</li>
-        <li>Achieved 15–25% better pricing margins than competitors</li>
-      </ul>
+    <section id="testimonials" class="section wave-top fade-in">
+      <h2>Testimonials</h2>
+      <blockquote>
+        "Aman is a dedicated and solution-oriented individual with a knack for solving complex challenges with ease."
+        <footer>- Mentor at BrandSearch</footer>
+      </blockquote>
+      <blockquote>
+        "He exceeded our expectations during his internship — especially with international outreach and conversion."
+        <footer>- Manager, Pickyourtrail</footer>
+      </blockquote>
     </section>
 
-    <section class="fade-in colorful-section">
-      <h2>Special Projects & Training</h2>
-      <ul>
-        <li>B2B platform operations and UX enhancement at BrandSearch</li>
-        <li>Pricing and competitor benchmarking at Pickyourtrail</li>
-      </ul>
-    </section>
-
-    <section class="fade-in colorful-section contact">
-      <h2>Contact</h2>
-      <p><i class="fas fa-envelope"></i> Aman.singhal22@ibsindia.org</p>
-      <p><i class="fas fa-phone"></i> +91-9899809035</p>
-      <p><i class="fas fa-map-marker-alt"></i> Delhi, India</p>
+    <section id="contact" class="section wave-bottom fade-in">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/xwkdggyr" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Aman Singhal | Designed with creativity and personality</p>
+    <p>© 2025 Aman Singhal | Designed with creativity and purpose</p>
   </footer>
 
   <script>
-    const toggle = document.getElementById('theme-toggle');
-    toggle.onclick = () => {
+    // Theme toggle
+    document.getElementById('theme-toggle').onclick = () => {
       const html = document.documentElement;
       const theme = html.getAttribute('data-theme');
       html.setAttribute('data-theme', theme === 'dark' ? 'light' : 'dark');
     };
 
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = { threshold: 0.3 };
-    const appearOnScroll = new IntersectionObserver((entries, obs) => {
+    // Scroll fade-in
+    const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('visible');
-        obs.unobserve(entry.target);
+        if (entry.isIntersecting) entry.target.classList.add('visible');
       });
-    }, appearOptions);
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    faders.forEach(fader => appearOnScroll.observe(fader));
+    // Custom cursor
+    const cursor = document.querySelector('.custom-cursor');
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
   </script>
 </body>
 </html>
