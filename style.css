@@ -1,13 +1,4 @@
-body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: var(--bg);
-  color: var(--text);
-  cursor: none;
-  transition: background 0.3s, color 0.3s;
-}
-
+/* Base Theme & Reset */
 :root {
   --bg-light: #f9f9fc;
   --text-light: #1a1a1a;
@@ -27,16 +18,38 @@ html[data-theme='dark'] {
   --text: var(--text-dark);
 }
 
-.custom-cursor {
-width: 20px;
-  height: 20px;
-  border: 2px solid var(--accent);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: 1000;}
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  cursor: none;
+  transition: background 0.3s, color 0.3s;
+}
 
+/* Custom Cursor */
+.custom-cursor, .custom-cursor-dot {
+  position: fixed;
+  top: 0; left: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+.custom-cursor {
+  width: 30px;
+  height: 30px;
+  background: rgba(99,102,241,0.2);
+  border: 2px solid var(--primary);
+  mix-blend-mode: difference;
+}
+.custom-cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+}
+
+/* Navbar */
 .navbar {
   position: sticky;
   top: 0;
@@ -49,7 +62,6 @@ width: 20px;
   z-index: 999;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
-
 .navbar ul {
   list-style: none;
   display: flex;
@@ -57,7 +69,6 @@ width: 20px;
   margin: 0;
   padding: 0;
 }
-
 .navbar a {
   text-decoration: none;
   color: var(--text);
@@ -77,7 +88,6 @@ width: 20px;
 .navbar a:hover::after {
   width: 100%;
 }
-
 #theme-toggle {
   font-size: 1.2rem;
   background: transparent;
@@ -85,6 +95,7 @@ width: 20px;
   cursor: pointer;
 }
 
+/* Hero Section */
 .hero {
   text-align: center;
   padding: 4rem 1rem 2rem;
@@ -92,9 +103,9 @@ width: 20px;
   color: #fff;
 }
 .profile-pic {
-  width: 170px;
-  height: 200px;
-  border-radius: 30%;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
   border: 4px solid #fff;
   object-fit: cover;
   margin-bottom: 1rem;
@@ -121,19 +132,14 @@ width: 20px;
   text-decoration: none;
 }
 
-main {
-  max-width: 1000px;
-  margin: auto;
-  padding: 2rem;
-}
+/* Section Styling */
 .section {
   padding: 3rem 2rem;
   border-radius: 12px;
-  margin: 2rem 0;
+  margin: 2rem auto;
   background: linear-gradient(to right, #f0f4ff, #e0f7ff);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  max-width: 1000px;
 }
-
 .wave-top::before,
 .wave-bottom::after {
   content: '';
@@ -141,7 +147,6 @@ main {
   height: 80px;
   background: url('https://svgshare.com/i/uTp.svg') center/cover no-repeat;
 }
-
 h2 {
   font-size: 1.6rem;
   color: var(--primary);
@@ -162,31 +167,31 @@ ul {
   box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
 }
 
-.card {
+/* Grid Layout */
+.card-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 2rem;
+}
+.card, .project-card {
   background: var(--card-bg);
   padding: 1.5rem;
-  border-left: 5px solid var(--primary);
-  margin-bottom: 1.5rem;
   border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.card:hover {
+.card:hover, .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+.card h3 span {
+  float: right;
+  font-size: 0.9rem;
+  color: #777;
 }
 
-.project-card {
-  background: #ffffff;
-  padding: 1.2rem;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  transition: transform 0.3s;
-}
-.project-card:hover {
-  transform: scale(1.02);
-}
-
+/* Other Sections */
 blockquote {
   background: #e6f0ff;
   border-left: 5px solid #6366f1;
@@ -235,6 +240,7 @@ footer {
   color: #666;
 }
 
+/* Animations */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -245,15 +251,16 @@ footer {
   transform: translateY(0);
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .navbar ul {
     flex-direction: column;
     gap: 0.5rem;
   }
-  .projects {
-    flex-direction: column;
-  }
-  .custom-cursor {
+  .custom-cursor, .custom-cursor-dot {
     display: none;
+  }
+  .hero {
+    padding: 3rem 1rem;
   }
 }
