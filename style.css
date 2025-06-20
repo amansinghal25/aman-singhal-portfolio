@@ -158,7 +158,6 @@ body {
 .wave-bottom::after {
   content: '';
   display: block;
-  height: 80px;
   background: url('https://svgshare.com/i/uTp.svg') center/cover no-repeat;
 }
 h2 {
