@@ -12,10 +12,6 @@ html[data-theme='light'] {
   --bg: var(--bg-light);
   --text: var(--text-light);
 }
-html[data-theme='dark'] {
-  --bg: var(--bg-dark);
-  --text: var(--text-dark);
-}
 
 body {
   margin: 0;
@@ -154,7 +150,7 @@ body {
   max-width: 1200px;
   box-sizing: border-box;
 }
-.wave-top::before,
+
 .wave-bottom::after {
   content: '';
   display: block;
