@@ -12,7 +12,6 @@
   <div class="custom-cursor"></div>
   <div class="custom-cursor-dot"></div>
 
-  <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-container">
       <button class="hamburger" id="hamburger">☰</button>
@@ -22,14 +21,14 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#education">Education</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#certifications">Certifications</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button id="theme-toggle" title="Toggle Theme">🌙</button>
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <header class="hero">
     <img src="aman-profile.jpg" alt="Aman Singhal" class="profile-pic" />
     <h1>Aman Singhal</h1>
@@ -41,19 +40,16 @@
     </div>
   </header>
 
-  <!-- Main Content -->
   <main>
-    <!-- About -->
+    <!-- About Section -->
     <section id="about" class="section fade-in">
       <h2>About Me</h2>
       <p>
-        Operations and Marketing enthusiast with hands-on experience in B2B product operations, digital marketing, and social media campaigns.
-        Adept at cross-functional coordination, data analysis, and business development.
-        Proven ability to drive operational efficiency and optimize user experience through structured processes and strong interpersonal skills.
+        Operations and Marketing enthusiast with hands-on experience in B2B product operations, digital marketing, and social media campaigns. Adept at cross-functional coordination, data analysis, and business development. Proven ability to drive operational efficiency and optimize user experience through structured processes and strong interpersonal skills.
       </p>
     </section>
 
-    <!-- Expertise -->
+    <!-- Expertise Section -->
     <section id="expertise" class="section wave-top fade-in">
       <h2>Expertise</h2>
       <div class="badges">
@@ -61,43 +57,44 @@
         <span>B2B Platform Management</span>
         <span>Marketing & Business Development</span>
         <span>Social Media Marketing</span>
-        <span>Data Analysis & Research</span>
+        <span>Data Analysis & Market Research</span>
         <span>SQL (Intermediate)</span>
       </div>
     </section>
 
-    <!-- Experience -->
+    <!-- Experience Section -->
     <section id="experience" class="section wave-bottom fade-in">
       <h2>Professional Experience</h2>
       <div class="card-grid">
         <div class="card">
           <h3>Operations Coordinator – BrandSearch, afaqs! <span>Dec 2024 – Present</span></h3>
           <ul>
-            <li>Led product lifecycle management and UX optimization</li>
-            <li>Coordinated with editorial, tech, and business teams</li>
-            <li>Managed pricing, credits, and support systems</li>
-            <li>Updated brand/agency data and analyzed user feedback</li>
+            <li>Oversaw product lifecycle management and UX optimization.</li>
+            <li>Coordinated with editorial, tech, and business teams.</li>
+            <li>Managed pricing plans, credit systems, and user support.</li>
+            <li>Led marketing campaigns for product visibility.</li>
+            <li>Analyzed user feedback to plan product enhancements.</li>
           </ul>
         </div>
         <div class="card">
           <h3>Marketing Intern – Pickyourtrail <span>Feb – May 2023</span></h3>
           <ul>
-            <li>Onboarded 80 hotels and converted 22 international leads</li>
-            <li>Conducted competitive pricing analysis across OTAs</li>
-            <li>Handled retention calls in Dubai and Singapore markets</li>
+            <li>Onboarded 80 hotels and converted 22 international leads.</li>
+            <li>Conducted pricing analysis for Dubai & Singapore markets.</li>
+            <li>Achieved better margins (15-25%) than competitors.</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Social Media Intern – Aashman Foundation <span>Jul – Oct 2021</span></h3>
+          <h3>Social Media Marketing Intern – Aashman Foundation <span>Jul – Oct 2021</span></h3>
           <ul>
-            <li>Promoted NGO across Instagram, Facebook, and Twitter</li>
-            <li>Created content and raised awareness/funds</li>
+            <li>Promoted NGO campaigns across Instagram, Facebook, and Twitter.</li>
+            <li>Created banners and visuals to boost engagement.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Projects -->
+    <!-- Projects Section -->
     <section id="projects" class="section wave-top fade-in">
       <h2>Projects</h2>
       <div class="card-grid">
@@ -112,7 +109,7 @@
       </div>
     </section>
 
-    <!-- Education -->
+    <!-- Education Section -->
     <section id="education" class="section wave-bottom fade-in">
       <h2>Education</h2>
       <ul>
@@ -123,7 +120,26 @@
       </ul>
     </section>
 
-    <!-- Testimonials -->
+    <!-- Achievements Section -->
+    <section id="achievements" class="section wave-top fade-in">
+      <h2>Achievements</h2>
+      <ul>
+        <li>SIP Appreciation Award (2023)</li>
+        <li>Letter of Recommendation from SIP company (2023)</li>
+        <li>Achieved 15-25% better pricing margins vs competitors</li>
+        <li>Onboarded 80 hotels and converted 22 international leads</li>
+      </ul>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section wave-bottom fade-in">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Intermediate SQL Queries – DataCamp (2022)</li>
+      </ul>
+    </section>
+
+    <!-- Testimonials Section -->
     <section id="testimonials" class="section wave-top fade-in">
       <h2>Testimonials</h2>
       <blockquote>
@@ -134,10 +150,18 @@
         "He exceeded our expectations during his internship — especially with international outreach and conversion."
         <footer>- Manager, Pickyourtrail</footer>
       </blockquote>
-      <button class="testimonial-btn" id="open-form">💬 Leave a Testimonial</button>
+      <button class="testimonial-btn" onclick="openModal()">Add Testimonial</button>
+
+      <!-- Modal for Google Form -->
+      <div id="testimonialModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <iframe src="https://forms.gle/ZDtD7BgD2V2NozLx8" width="100%" height="600" frameborder="0"></iframe>
+        </div>
+      </div>
     </section>
 
-    <!-- Contact -->
+    <!-- Contact Section -->
     <section id="contact" class="section wave-bottom fade-in">
       <h2>Contact Me</h2>
       <form action="https://formspree.io/f/xwkdggyr" method="POST">
@@ -153,24 +177,18 @@
     <p>© 2025 Aman Singhal | Designed with creativity and purpose</p>
   </footer>
 
-  <!-- Modal for Google Form -->
-  <div class="modal" id="testimonial-modal">
-    <div class="modal-content">
-      <span class="close" id="close-modal">&times;</span>
-      <iframe src="https://forms.gle/ZDtD7BgD2V2NozLx8" width="100%" height="500" frameborder="0"></iframe>
-    </div>
-  </div>
-
-  <!-- Scripts -->
   <script>
-    // Theme toggle
-    document.getElementById('theme-toggle').onclick = () => {
-      const html = document.documentElement;
-      const theme = html.getAttribute('data-theme');
-      html.setAttribute('data-theme', theme === 'dark' ? 'light' : 'dark');
-    };
+    // Smooth scrolling
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+        document.getElementById('nav-links').classList.remove('active');
+      });
+    });
 
-    // Intersection Observer for animations
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
@@ -178,7 +196,6 @@
     }, { threshold: 0.2 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    // Custom Cursor
     const cursor = document.querySelector('.custom-cursor');
     const dot = document.querySelector('.custom-cursor-dot');
     document.addEventListener('mousemove', e => {
@@ -188,17 +205,21 @@
       dot.style.top = e.clientY + 'px';
     });
 
-    // Hamburger Menu
     document.getElementById('hamburger').onclick = () => {
       document.getElementById('nav-links').classList.toggle('active');
     };
 
-    // Modal for Google Form
-    const modal = document.getElementById("testimonial-modal");
-    document.getElementById("open-form").onclick = () => modal.style.display = "block";
-    document.getElementById("close-modal").onclick = () => modal.style.display = "none";
-    window.onclick = e => {
-      if (e.target === modal) modal.style.display = "none";
+    function openModal() {
+      document.getElementById("testimonialModal").style.display = "block";
+    }
+    function closeModal() {
+      document.getElementById("testimonialModal").style.display = "none";
+    }
+    window.onclick = function(event) {
+      const modal = document.getElementById("testimonialModal");
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
     };
   </script>
 </body>
