@@ -12,6 +12,7 @@
   <div class="custom-cursor"></div>
   <div class="custom-cursor-dot"></div>
 
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-container">
       <button class="hamburger" id="hamburger">☰</button>
@@ -24,10 +25,11 @@
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button id="theme-toggle"> </button>
+      <button id="theme-toggle" title="Toggle Theme">🌙</button>
     </div>
   </nav>
 
+  <!-- Hero Section -->
   <header class="hero">
     <img src="aman-profile.jpg" alt="Aman Singhal" class="profile-pic" />
     <h1>Aman Singhal</h1>
@@ -39,7 +41,9 @@
     </div>
   </header>
 
+  <!-- Main Content -->
   <main>
+    <!-- About -->
     <section id="about" class="section fade-in">
       <h2>About Me</h2>
       <p>
@@ -49,6 +53,7 @@
       </p>
     </section>
 
+    <!-- Expertise -->
     <section id="expertise" class="section wave-top fade-in">
       <h2>Expertise</h2>
       <div class="badges">
@@ -61,6 +66,7 @@
       </div>
     </section>
 
+    <!-- Experience -->
     <section id="experience" class="section wave-bottom fade-in">
       <h2>Professional Experience</h2>
       <div class="card-grid">
@@ -91,6 +97,7 @@
       </div>
     </section>
 
+    <!-- Projects -->
     <section id="projects" class="section wave-top fade-in">
       <h2>Projects</h2>
       <div class="card-grid">
@@ -99,12 +106,13 @@
           <p>Redesigned pricing, credit system, and ops workflows for thousands of B2B users.</p>
         </div>
         <div class="project-card">
-        <h3>SIP at Pickyourtrail</h3>
+          <h3>SIP at Pickyourtrail</h3>
           <p>Pricing and data comparison project during SIP at Pickyourtrail.</p>
         </div>
       </div>
     </section>
 
+    <!-- Education -->
     <section id="education" class="section wave-bottom fade-in">
       <h2>Education</h2>
       <ul>
@@ -115,6 +123,7 @@
       </ul>
     </section>
 
+    <!-- Testimonials -->
     <section id="testimonials" class="section wave-top fade-in">
       <h2>Testimonials</h2>
       <blockquote>
@@ -125,8 +134,10 @@
         "He exceeded our expectations during his internship — especially with international outreach and conversion."
         <footer>- Manager, Pickyourtrail</footer>
       </blockquote>
+      <button class="testimonial-btn" id="open-form">💬 Leave a Testimonial</button>
     </section>
 
+    <!-- Contact -->
     <section id="contact" class="section wave-bottom fade-in">
       <h2>Contact Me</h2>
       <form action="https://formspree.io/f/xwkdggyr" method="POST">
@@ -142,13 +153,24 @@
     <p>© 2025 Aman Singhal | Designed with creativity and purpose</p>
   </footer>
 
+  <!-- Modal for Google Form -->
+  <div class="modal" id="testimonial-modal">
+    <div class="modal-content">
+      <span class="close" id="close-modal">&times;</span>
+      <iframe src="https://forms.gle/ZDtD7BgD2V2NozLx8" width="100%" height="500" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <!-- Scripts -->
   <script>
+    // Theme toggle
     document.getElementById('theme-toggle').onclick = () => {
       const html = document.documentElement;
       const theme = html.getAttribute('data-theme');
       html.setAttribute('data-theme', theme === 'dark' ? 'light' : 'dark');
     };
 
+    // Intersection Observer for animations
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
@@ -156,6 +178,7 @@
     }, { threshold: 0.2 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+    // Custom Cursor
     const cursor = document.querySelector('.custom-cursor');
     const dot = document.querySelector('.custom-cursor-dot');
     document.addEventListener('mousemove', e => {
@@ -165,8 +188,17 @@
       dot.style.top = e.clientY + 'px';
     });
 
+    // Hamburger Menu
     document.getElementById('hamburger').onclick = () => {
       document.getElementById('nav-links').classList.toggle('active');
+    };
+
+    // Modal for Google Form
+    const modal = document.getElementById("testimonial-modal");
+    document.getElementById("open-form").onclick = () => modal.style.display = "block";
+    document.getElementById("close-modal").onclick = () => modal.style.display = "none";
+    window.onclick = e => {
+      if (e.target === modal) modal.style.display = "none";
     };
   </script>
 </body>
